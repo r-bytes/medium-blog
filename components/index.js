@@ -1,1 +1,2 @@
-export { default as Header } from "./Header.jsx"
+export { default as Header } from "./Header.tsx"
+export { default as Hero } from "./Hero.tsx"

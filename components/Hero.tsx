@@ -6,7 +6,7 @@ const Hero = () => {
                 <h2> Its easy and free to post your thinking on any topic and connect with millions of readers </h2>
             </div>
 
-            <div className="px-10 h-full text-[128px] font-serif hidden md:inline-flex lg:text-[400px]"> R </div>
+            <div className="px-10 h-full text-[128px] font-serif font-bold hidden md:inline-flex lg:text-[400px]"> R </div>
         </div>
     )
 }

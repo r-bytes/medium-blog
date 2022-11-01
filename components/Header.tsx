@@ -6,7 +6,13 @@ const Header = () => {
         <header className="flex justify-between p-5 max-w-7xl mx-auto">
             <div className="flex items-center space-x-5">
                 <Link href={"/"}>
-                    <Image src={"/assets/r-bytes.png"} alt="#" width={200} height={200} />
+                    <Image
+                        src={"/assets/r-bytes.png"}
+                        alt="#"
+                        width={200}
+                        height={200}
+                        style={{width: "auto"}}
+                    />
                 </Link>
                 <div className="hidden md:inline-flex items-center space-x-5">
                     <h3> About </h3>

@@ -1,19 +1,17 @@
 import { GetStaticPaths, GetStaticProps } from "next"
 import Image from "next/image";
-import { Header } from "../../components"
+import { Form, Header } from "../../components"
 import { sanityClient, urlFor } from "../../sanity"
 import { Post } from "../../typings"
 import PortableText from "react-portable-text"
-
 interface Props {
     post: Post;
 }
 
 const CurrentPost = ({ post }: Props ) => {
     return (
-        <main >
+        <main>
             <Header />
-            
             <Image className="w-full h-60 object-cover" src={urlFor(post.mainImage).url()!} alt={post.title} width={600} height={600} />
 
             <article className="max-w-3xl mx-auto p-5">
@@ -56,32 +54,13 @@ const CurrentPost = ({ post }: Props ) => {
                 </div>
             </article>
 
-            <hr className="max-w-2xl my-5 mx-auto border border-gray-200" />
+            <hr className="max-w-[45rem] my-5 mx-auto border border-gray-200" />
 
-            <form action="" className="flex flex-col p-5 my-10 max-w-2xl mx-auto mb-10">
-                <h3 className="text-sm text-green-500"> Enjoyed this article? </h3>
-                <h2 className="text-3xl font-bold mb-8"> Leave a comment below </h2>
-            
-                <label className="block mb-5" htmlFor="name">
-                    <span className="text-gray-700"> Name </span>
-                    <input className="shadow border rounded py-2 px-3 form-input mt-1 block w-full ring-green-500" id="name" type="text" placeholder="Alice Wonderland" />
-                </label>
-
-                <label className="block mb-5" htmlFor="email">
-                    <span className="text-gray-700"> Email </span>
-                    <input className="shadow border rounded py-2 px-3 form-input mt-1 block w-full ring-green-500" id="email" type="text" placeholder="a@wonderland.com" />
-                </label>
-
-                <label className="block mb-5" htmlFor="comment">
-                    <span className="text-gray-700"> Comment </span>
-                    <textarea className="shadow border rounded py-2 px-3 form-input mt-1 block w-full ring-green-500" id="comment" rows={10} />
-                </label>
-
-            </form>
-
+            <Form post={post} />
         </main>
     )
 }
+
 export default CurrentPost
 
 export const getStaticPaths: GetStaticPaths = async () => {

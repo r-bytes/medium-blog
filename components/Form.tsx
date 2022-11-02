@@ -28,7 +28,7 @@ const Form = ({ post }: Props ) => {
 
     return (
         <form
-            onSubmit={handleSubmit(onSubmit)}
+            // onSubmit={handleSubmit(onSubmit)}
             className="flex flex-col p-5 my-10 max-w-[47rem] mx-auto mb-10"
         >
             <h3 className="text-sm text-green-500"> Enjoyed this article? </h3>

@@ -112,13 +112,13 @@ const Form = ({ post }: Props ) => {
 
                 {/* Comments */}
                 <div className="flex flex-col p-10 my-10 max-w-[44rem] mx-auto shadow shadow-green-300">
-                    <h3 className="text-3xl"> Comments </h3>
-                    <hr className="pb-2" />
+                    <h3 className="text-3xl mb-4"> Comments </h3>
+                    <hr className="pb-4" />
                     {post.comments?.map(comment => (
                         <div key={comment._id}>
-                            <p>
+                            <p className="mb-4">
                                <span className="text-green-500">{comment.name}: </span>
-                               <span>{comment.comment}</span>
+                               <span> {comment.comment} </span>
                             </p>
                         </div>
                     ))}

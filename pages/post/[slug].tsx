@@ -9,7 +9,6 @@ interface Props {
 }
 
 const CurrentPost = ({ post }: Props ) => {
-    console.log(post)
     return (
         <main>
             <Header />

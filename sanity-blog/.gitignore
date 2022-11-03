@@ -11,4 +11,3 @@ node_modules
 # Compiled sanity studio
 /dist
 
-sanity.json

@@ -9,12 +9,13 @@ interface Props {
 }
 
 const CurrentPost = ({ post }: Props ) => {
+    console.log(post)
     return (
         <main>
             <Header />
             <Image className="w-full h-60 object-cover" src={urlFor(post.mainImage).url()!} alt={post.title} width={600} height={600} />
             <Article post={post} />
-            <hr className="max-w-[45rem] my-5 mx-auto border border-gray-200" />
+            <hr className="max-w-[44rem] my-5 mx-auto border border-gray-200" />
             <Form post={post} />
         </main>
     )
